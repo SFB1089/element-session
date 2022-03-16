@@ -42,7 +42,7 @@ def activate(schema_name, create_schema=True, create_tables=True,
 class Session(dj.Manual):
     definition = """
     -> Subject
-    session_id: int
+    session_id: varchar(16)
     ---
     session_datetime: datetime
     """
@@ -54,15 +54,16 @@ class SessionDirectory(dj.Manual):
     -> Session
     ---
     session_dir: varchar(256) # Path to the data directory for a session
+    -> User
     """
 
 
 @schema
-class SessionExperimenter(dj.Manual):
+class SessionUser(dj.Manual):
     definition = """
     # Individual(s) conducting the session
     -> Session
-    -> Experimenter
+    -> User
     """
 
 
