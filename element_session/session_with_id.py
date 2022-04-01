@@ -40,9 +40,9 @@ def activate(schema_name, create_schema=True, create_tables=True,
 @schema
 class Session(dj.Manual):
     definition = """
-    -> Subject
-    session_id: varchar(16)
+    session_id: varchar(12)
     ---
+    -> Subject
     session_datetime: datetime
     """
 
