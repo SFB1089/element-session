@@ -91,3 +91,8 @@ class Location(dj.Manual):
     location_full='': varchar(1000)
     """
   
+@schema
+class Equipment(dj.Manual):
+    definition = """
+    scanner: varchar(32)
+    """
