@@ -82,3 +82,10 @@ class ProjectSession(dj.Manual):
     -> Project
     -> Session
     """
+
+@schema
+class Location(dj.Manual):
+  definition = """
+  location: varchar(32)
+  ---
+  location_full='': varchar(1000)
