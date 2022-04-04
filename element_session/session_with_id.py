@@ -85,7 +85,9 @@ class ProjectSession(dj.Manual):
 
 @schema
 class Location(dj.Manual):
-  definition = """
-  location: varchar(32)
-  ---
-  location_full='': varchar(1000)
+    definition = """
+    location: varchar(32)
+    ---
+    location_full='': varchar(1000)
+    """
+  
