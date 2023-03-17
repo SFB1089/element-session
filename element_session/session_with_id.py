@@ -56,6 +56,13 @@ class SessionDirectory(dj.Manual):
     -> User
     """
 
+@schema
+class SessionRspace(dj.Manual):
+    definition = """
+    -> Session
+    ---
+    rspace_id: varchar(32) # id of rspace session document
+    """
 
 @schema
 class SessionUser(dj.Manual):
