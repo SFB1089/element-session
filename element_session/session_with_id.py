@@ -64,6 +64,19 @@ class SessionRspace(dj.Manual):
     rspace_id: varchar(32) # id of rspace session document
     """
 
+@schema 
+class SessionSite(dj.Manual):
+    definition = """
+    same_site_id : varchar(12)
+    """
+@schema 
+class SessionSameSite(dj.Manual):
+    definition = """
+    -> Session
+    ---
+    -> SessionSite
+    """
+
 @schema
 class SessionUser(dj.Manual):
     definition = """
@@ -79,7 +92,6 @@ class SessionNote(dj.Manual):
     -> Session
     ---
     session_note: varchar(1024)
-
     """
 
 
